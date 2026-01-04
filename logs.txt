@@ -1,0 +1,249 @@
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files (main)
+$ cd devops
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/ehtis/OneDrive/Desktop/New folder (7)/files/devops/.git/
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git add .
+warning: in the working copy of 'about.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'contact.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git add '
+>
+> ^C
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git add .
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git commit -m "commit all"
+[main 8bb0097] commit all
+ 4 files changed, 49 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 contact.html
+ create mode 100644 index.html
+ create mode 100644 styles.css
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git branch feature-branch
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ echo body { > styles.css
+echo     background-color: blue; >> styles.css
+echo     font-family: Arial; >> styles.css
+echo } >> styles.css
+git add styles.css
+git commit -m "feature: Change background to blue"
+background-color: blue
+font-family: Arial
+warning: in the working copy of 'styles.css', LF will be replaced by CRLF the next time Git touches it
+[main b8daa67] feature: Change background to blue
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git checkout main
+echo body { > styles.css
+echo     background-color: red; >> styles.css
+echo     font-family: Arial; >> styles.css
+echo } >> styles.css
+git add styles.css
+git commit -m "main: Change background to red"
+Already on 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+background-color: red
+font-family: Arial
+warning: in the working copy of 'styles.css', LF will be replaced by CRLF the next time Git touches it
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git merge feature-branch
+Already up to date.
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ echo body { > styles.css
+echo     background-color: purple; >> styles.css
+echo     font-family: Arial; >> styles.css
+echo } >> styles.css
+git add styles.css
+git commit -m "Resolved conflict: Combined red and blue to purple"
+background-color: purple
+font-family: Arial
+warning: in the working copy of 'styles.css', LF will be replaced by CRLF the next time Git touches it
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ ^C
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git checkout feature-branch
+Switched to branch 'feature-branch'
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (feature-branch)
+$ echo body { > styles.css
+echo     background-color: blue; >> styles.css
+echo     font-family: Arial; >> styles.css
+echo } >> styles.css
+git add styles.css
+git commit -m "feature: Change background to blue"
+background-color: blue
+font-family: Arial
+warning: in the working copy of 'styles.css', LF will be replaced by CRLF the next time Git touches it
+[feature-branch cd2f188] feature: Change background to blue
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (feature-branch)
+$ git checkout main
+echo body { > styles.css
+echo     background-color: red; >> styles.css
+echo     font-family: Arial; >> styles.css
+echo } >> styles.css
+git add styles.css
+git commit -m "main: Change background to red"
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+background-color: red
+font-family: Arial
+warning: in the working copy of 'styles.css', LF will be replaced by CRLF the next time Git touches it
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git checkout main
+echo body { > styles.css
+echo     background-color: red; >> styles.css
+echo     font-family: Arial; >> styles.css
+echo } >> styles.css
+git add styles.css
+git commit -m "main: Change background to red"
+Already on 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+background-color: red
+font-family: Arial
+warning: in the working copy of 'styles.css', LF will be replaced by CRLF the next time Git touches it
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git add styles.css
+warning: in the working copy of 'styles.css', LF will be replaced by CRLF the next time Git touches it
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git commit -m "bg changed"
+[main 0fb20ce] bg changed
+ 1 file changed, 5 insertions(+)
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git merge feature-branch
+Auto-merging styles.css
+CONFLICT (content): Merge conflict in styles.css
+Automatic merge failed; fix conflicts and then commit the result.
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main|MERGING)
+$ git add styles.css
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main|MERGING)
+$ git commit -m "resolved confilict"
+[main 3086f66] resolved confilict
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git log --online -graph --all
+fatal: unrecognized argument: --online
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git log --oneline -graph --all
+fatal: unrecognized argument: -graph
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git log --oneline --graph --all
+*   3086f66 (HEAD -> main) resolved confilict
+|\
+| * cd2f188 (feature-branch) feature: Change background to blue
+* | 0fb20ce bg changed
+* | b8daa67 feature: Change background to blue
+|/
+* 8bb0097 commit all
+* 896af28 (origin/main, origin/HEAD) Initial commit
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git remote add origin https://github.com/esham1337/devops.git
+error: remote origin already exists.
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git push origin main
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (16/16), 1.49 KiB | 190.00 KiB/s, done.
+Total 16 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/esham1337/devops.git
+   896af28..3086f66  main -> main
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git push origin feature-brnach
+error: src refspec feature-brnach does not match any
+error: failed to push some refs to 'https://github.com/esham1337/devops.git'
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ ^C
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ git push origin feature-branch
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'feature-branch' on GitHub by visiting:
+remote:      https://github.com/esham1337/devops/pull/new/feature-branch
+remote:
+To https://github.com/esham1337/devops.git
+ * [new branch]      feature-branch -> feature-branch
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ echo done !
+done !
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$ pause
+bash: pause: command not found
+
+ehtis@stich MINGW64 ~/OneDrive/Desktop/New folder (7)/files/devops (main)
+$
